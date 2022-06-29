@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -6,9 +7,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Heart Disease Predictor</title>
 		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" type="text/css" href="/static/style.css">
 		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<style>
+			body{
+				background-color: #b6b2b2;
+			}
+		</style>
 	</head>
 
     <body>
@@ -17,17 +23,17 @@
 		<div class="container">
             <h2 class='container-heading'><span class="heading_font">Heart Disease Predictor</span></h2>
             <div class='description'>
-    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    			<p style="margin-top: 5px; font-size: 30px" >Model Result</p>
     		</div>
     	</div>
 
 		<!-- Result -->
 		<div class="results">
 			{% if prediction==1 %}
-				<h1>Prediction: <span class='danger'>Oops! You have Chances of Heart Disease.</span></h1>
+				<h1>Prediction: <span class='danger'>You have Chances of Heart Disease.</span></h1>
 				
 			{% elif prediction==0 %}
-				<h1>Prediction: <span class='safe'>Great! You DON'T chances have Heart Disease.</span></h1>
+				<h1>Prediction: <span class='safe'>You DON'T chances have Heart Disease.</span></h1>
 				
 			{% endif %}
 		</div>
@@ -38,7 +44,7 @@
                <a target="_blank" href="https://github.com/asthasharma98/Heart-Disease-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
                <a target="_blank" href="https://www.linkedin.com/in/astha-sharma-47266b11b/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
            </div>
-           <p class='footer-description'>Made by Astha Sharma.</p>
+           <p class='footer-description'>Made by Nimra Manzoor ID:bc180405909</p>
        </div>
 
 	</body>
